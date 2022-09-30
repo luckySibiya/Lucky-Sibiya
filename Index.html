@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel = "stylesheet" href="./Style.css"> 
+    <script src="https://kit.fontawesome.com/da2a7963f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.jpg" class="logo"> 
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Junior Software Developer</p> 
+                <h1>Hi, I'm <span>Lucky</span><br> From Vaal</h1>
+            </div>
+        </div>
+    </div>
+    <!-------------About Section----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/AboutMe.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I am an energetic, ambitious young man who has established a
+                        mature and responsible approach to any task that I undertake. I
+                        am a final year (3rd) IT student at Damelin College, with
+                        working experience as a Software Developer Intern. I work well
+                        with others to achieve objectives on time and with excellence. </p>
+
+                        <div class="tab-titles"> 
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"  onclick="opentab('education')">Education</p>
+                            
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C(Programming Language)</span></li>
+                                <li><span>C#(Programming Language)</span></li>
+                                <li><span>Java(Programming Language)</span></li>
+                                <li><span>HTML5, CSS & JavaScript</span></li>
+                                <li><span>Microsoft SQL Server</span></li>
+                                <li><span>Linux/Command Line</span></li>
+                                <li><span>AWS</span></li>
+                                <li><span>Git&GitHub</span></li>
+                                <li><span>Agile Methodologies</span></li>
+                                <li><span>Data Structure & Algorithms</span></li>
+                            </ul>
+
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Software Developer Intern</span><br>The App Factory is an internship program that allowed me to
+                                    work on a variety of projects such as personal profiles, websites,
+                                    databases, and so on using JavaScript, HTML , CSS, .Net Frame
+                                    Work under the senior developer's supervision.</li>
+                                    <li><span>Full Stack Software Engineer Trainee</span><br> The ALX is an Full Stack software Engineer program for 12-
+                                        month that allows me to work on a variety of projects while
+                                        learning C programming, Linux, Python, Networking,
+                                        Databases, Systems Engineering and other programming
+                                        languages. At the end of the program, I will graduate with two
+                                        specializations, Front-End and Back-End.</li>
+                            </ul>
+
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Damelin College</span><br>Diploma In Information Technology<br>January 2020 - December 2022</li>
+                                    <li><span>Phumulani Secondary School</span><br>National Senior Certificate<br>January 2019 - December 2019</li>  
+                            </ul>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------Contact Section----------------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>lm.sibiya28@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i>081 730 8360</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/skyline_l_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Skyline_L_"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.linkedin.com/in/lucky-sibiya-74a4a3236/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/luckySibiya"><i class="fa-brands fa-github"></i></a>
+                </div>
+             <a href="Images/Lucky Sibiya.pdf" download class="btn btn2">Download CV</a>
+
+             
+              
+            </div>
+    
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" Required>
+                    <input type="email" name="email" placeholder="Your email" Required>
+                    <textarea name="Mesage" rows="10" placeholder="Your message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        <input type="button" onclick="location.href='https://google.com';" value="Go to Google" />
+        </script>
+</body>
+</html>
